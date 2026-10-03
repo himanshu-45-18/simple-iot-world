@@ -1,0 +1,29 @@
+{
+  "name": "simple-iot-world",
+  "version": "1.0.0",
+  "description": "Simple IoT World - Full-Stack IoT Web Application for ESP8266 with NodeMCU, DHT11, LCD 16x2 I2C, and LED",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "iot",
+    "esp8266",
+    "nodemcu",
+    "dht11",
+    "lcd1602",
+    "render",
+    "express",
+    "tailwind"
+  ],
+  "author": "Himanshu (Dept of ETC, SB Jain, Nagpur)",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}

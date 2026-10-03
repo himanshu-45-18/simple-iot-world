@@ -1,0 +1,413 @@
+/* ========================================================
+   Simple IoT World - Cyber Aurora / High-Tech Futuristic Theme
+   Colors: Electric Indigo, Cyber Neon Cyan, Vivid Violet, Emerald
+   ======================================================== */
+
+:root {
+  --primary-glow: rgba(99, 102, 241, 0.4);
+  --cyan-glow: rgba(6, 182, 212, 0.4);
+  --emerald-glow: rgba(16, 185, 129, 0.4);
+  --accent-glow: rgba(168, 85, 247, 0.4);
+}
+
+/* Background Animated Gradient Mesh */
+.bg-mesh-dark {
+  background: 
+    radial-gradient(circle at 15% 15%, rgba(99, 102, 241, 0.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(6, 182, 212, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 50% 85%, rgba(168, 85, 247, 0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 40%),
+    #070a13;
+}
+
+.bg-mesh-light {
+  background: 
+    radial-gradient(circle at 10% 10%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 90% 15%, rgba(6, 182, 212, 0.08) 0%, transparent 45%),
+    radial-gradient(circle at 50% 90%, rgba(168, 85, 247, 0.07) 0%, transparent 50%),
+    #f8fafc;
+}
+
+/* Frosted Holographic Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.04), 0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+.dark .glass-panel {
+  background: rgba(13, 18, 30, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.04) inset;
+}
+
+.glass-panel-glow {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-glow:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.15), 0 0 20px rgba(99, 102, 241, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Cyber Tab Navigation */
+.cyber-tab-btn {
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.cyber-tab-btn.active-tab {
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #7c3aed 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.55), 0 4px 12px rgba(79, 70, 229, 0.35);
+  border-color: rgba(199, 210, 254, 0.4) !important;
+}
+
+/* ========================================================
+   CIRCULAR PROGRESS & GAUGE STYLES
+   ======================================================== */
+.gauge-svg-circle-bg {
+  fill: none;
+  stroke: rgba(148, 163, 184, 0.15);
+  stroke-width: 10;
+}
+
+.gauge-svg-circle-val {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.85s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================================
+   AUTHENTIC 16X2 LCD RETRO DISPLAY WITH PCB BEZEL
+   ======================================================== */
+.lcd-pcb-bezel {
+  background: #064e3b;
+  background-image: 
+    radial-gradient(#047857 15%, transparent 16%),
+    radial-gradient(#047857 15%, transparent 16%);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  box-shadow: inset 0 2px 4px rgba(255,255,255,0.2), inset 0 -2px 6px rgba(0,0,0,0.6), 0 15px 35px -5px rgba(0,0,0,0.5);
+}
+
+.lcd-screen-backlight {
+  background: #14532d;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.8), 0 0 20px rgba(34, 197, 94, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+/* LCD Glass Reflection Glare */
+.lcd-screen-backlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20%;
+  width: 140%;
+  height: 45%;
+  background: linear-gradient(180deg, rgba(255,255,255,0.12) 0%, rgba(255,255,255,0.01) 100%);
+  transform: skewY(-8deg);
+  pointer-events: none;
+}
+
+.lcd-font-matrix {
+  font-family: 'VT323', monospace;
+  color: #4ade80;
+  text-shadow: 0 0 6px rgba(74, 222, 128, 0.8), 0 0 14px rgba(34, 197, 94, 0.5);
+  letter-spacing: 0.22em;
+}
+
+.lcd-char-grid {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.4) 1px, transparent 1px);
+  background-size: 3px 3px;
+}
+
+/* ========================================================
+   ARC REACTOR / CYBERPUNK 3D LED CONTROLLER
+   ======================================================== */
+.reactor-core {
+  position: relative;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Reactor OFF */
+.reactor-core.is-off {
+  background: radial-gradient(circle, #1e293b 0%, #0f172a 70%, #020617 100%);
+  border: 4px solid #334155;
+  box-shadow: inset 0 4px 15px rgba(0,0,0,0.8), 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.reactor-core.is-off .reactor-ring-outer {
+  border: 2px dashed rgba(148, 163, 184, 0.25);
+  animation: rotateSlow 40s linear infinite;
+}
+
+.reactor-core.is-off .reactor-center-gem {
+  background: #334155;
+  color: #64748b;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Reactor ON */
+.reactor-core.is-on {
+  background: radial-gradient(circle, #06b6d4 0%, #3b82f6 45%, #1e1b4b 90%);
+  border: 4px solid #67e8f9;
+  box-shadow: 
+    0 0 60px 15px rgba(6, 182, 212, 0.6),
+    0 0 100px 30px rgba(99, 102, 241, 0.4),
+    inset 0 0 35px rgba(255, 255, 255, 0.8);
+}
+
+.reactor-core.is-on .reactor-ring-outer {
+  border: 2px dashed #a5f3fc;
+  animation: rotateFast 12s linear infinite;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.5);
+}
+
+.reactor-core.is-on .reactor-center-gem {
+  background: #ffffff;
+  color: #0284c7;
+  box-shadow: 0 0 30px #ffffff, 0 0 50px #38bdf8;
+  transform: scale(1.1);
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes rotateFast {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Sci-Fi Hologram Toggle Switch */
+.cyber-switch-btn {
+  position: relative;
+  background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%);
+  border: 2px solid #4338ca;
+  color: #a5b4fc;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.1);
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cyber-switch-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: #6366f1;
+  box-shadow: 0 15px 35px -5px rgba(99, 102, 241, 0.4);
+}
+
+.cyber-switch-btn.active-switch {
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 50%, #6366f1 100%);
+  border-color: #a5f3fc;
+  color: #ffffff;
+  box-shadow: 0 0 40px 8px rgba(6, 182, 212, 0.6), 0 12px 30px rgba(59, 130, 246, 0.5);
+}
+
+/* ========================================================
+   HIMANSHU ANIMATED SIGNATURE
+   ======================================================== */
+@keyframes himanshuCyberGradient {
+  0% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.8)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.6));
+  }
+  50% {
+    background-position: 100% 50%;
+    filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.9)) drop-shadow(0 0 24px rgba(236, 72, 153, 0.7));
+  }
+  100% {
+    background-position: 0% 50%;
+    filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.8)) drop-shadow(0 0 16px rgba(99, 102, 241, 0.6));
+  }
+}
+
+@keyframes himanshuLevitate {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+}
+
+@keyframes sparkleSpin {
+  0% { transform: scale(0.9) rotate(0deg); opacity: 0.8; }
+  50% { transform: scale(1.35) rotate(180deg); opacity: 1; filter: drop-shadow(0 0 6px #fde047); }
+  100% { transform: scale(0.9) rotate(360deg); opacity: 0.8; }
+}
+
+.himanshu-cyber-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6, #ec4899, #10b981, #06b6d4);
+  background-size: 350% 350%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: himanshuCyberGradient 4s ease infinite, himanshuLevitate 2.5s ease-in-out infinite;
+  padding: 2px 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.himanshu-cyber-signature:hover {
+  transform: scale(1.15) rotate(1deg);
+  filter: drop-shadow(0 0 20px rgba(6, 182, 212, 1)) drop-shadow(0 0 35px rgba(168, 85, 247, 0.9));
+}
+
+.himanshu-sparkle-star {
+  display: inline-block;
+  animation: sparkleSpin 2s linear infinite;
+  color: #fde047;
+  -webkit-text-fill-color: initial;
+}
+
+/* Animated Pulse Heart */
+@keyframes heartPulse {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.35); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.28); }
+  70% { transform: scale(1); }
+  100% { transform: scale(1); }
+}
+
+.heart-pulse {
+  display: inline-block;
+  animation: heartPulse 1.3s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+  transform-origin: center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(6, 182, 212, 0.65);
+}
+
+/* ========================================================
+   NEW ANIMATED FEATURE STYLES
+   ======================================================== */
+
+/* Voice Listening Active Pulse */
+@keyframes voiceRipple {
+  0% {
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0.8), 0 0 15px rgba(6, 182, 212, 0.5);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+  100% {
+    box-shadow: 0 0 0 16px rgba(6, 182, 212, 0), 0 0 25px rgba(6, 182, 212, 0);
+    transform: scale(1);
+  }
+}
+
+.voice-recording {
+  animation: voiceRipple 1.4s infinite cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: linear-gradient(135deg, #06b6d4, #3b82f6) !important;
+  border-color: #a5f3fc !important;
+  color: #ffffff !important;
+}
+
+/* Emergency Alert Strobe */
+@keyframes alertStrobeAnim {
+  0%, 100% {
+    opacity: 1;
+    border-color: rgba(244, 63, 94, 0.9);
+    box-shadow: 0 0 30px rgba(244, 63, 94, 0.4), inset 0 0 15px rgba(244, 63, 94, 0.2);
+  }
+  50% {
+    opacity: 0.75;
+    border-color: rgba(244, 63, 94, 0.3);
+    box-shadow: 0 0 10px rgba(244, 63, 94, 0.1);
+  }
+}
+
+.alert-strobe {
+  animation: alertStrobeAnim 1.6s infinite ease-in-out;
+}
+
+/* Simulator Active Glow */
+@keyframes simPulse {
+  0%, 100% {
+    border-color: rgba(16, 185, 129, 0.8);
+    box-shadow: 0 0 18px rgba(16, 185, 129, 0.4);
+  }
+  50% {
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.1);
+  }
+}
+
+.sim-active {
+  animation: simPulse 2s infinite ease-in-out;
+}
+
+/* LCD Preset Chips */
+.lcd-preset-chip {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.25);
+}
+
+.lcd-preset-chip:hover {
+  transform: translateY(-2px) scale(1.03);
+  background: rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.5);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.25);
+  color: #38bdf8;
+}
+
+.lcd-preset-chip:active {
+  transform: translateY(0px) scale(0.98);
+}
+
+/* Ambient Floating Cyber Orbs */
+@keyframes floatOrb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  66% {
+    transform: translate(-25px, 20px) scale(0.92);
+  }
+}
+
+.ambient-orb-1 {
+  animation: floatOrb 18s ease-in-out infinite;
+}
+
+.ambient-orb-2 {
+  animation: floatOrb 24s ease-in-out infinite reverse;
+}
+
